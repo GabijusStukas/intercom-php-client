@@ -1,0 +1,29 @@
+{
+    "name": "gabijusstukas/intercom-php-client",
+    "description": "Intercom API client built on top of Guzzle HTTP",
+    "keywords": [
+        "api",
+        "guzzle",
+        "intercom",
+        "intercom.io"
+    ],
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "Gabijus Stukas",
+            "email": "gabijus.stukas@gmail.com",
+            "homepage": "https://github.com/gabijusstukas"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^7.9.1",
+        "php": "^8.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Intercom\\": [
+                "src"
+            ]
+        }
+    }
+}
