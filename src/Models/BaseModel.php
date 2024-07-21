@@ -2,10 +2,19 @@
 
 namespace Intercom\Models;
 
+use Carbon\Carbon;
 use stdClass;
 
 abstract class BaseModel
 {
+    /**
+     * @param stdClass $data
+     */
+    public function __construct(stdClass $data)
+    {
+        $this->setData($data);
+    }
+
     /**
      * @param stdClass $data
      *
@@ -19,5 +28,10 @@ abstract class BaseModel
                 $this->$key = $val;
             }
         }
+    }
+
+    protected function setTimestamp(?int $timestamp): ?Carbon
+    {
+        return $timestamp ? Carbon::parse($timestamp) : null;
     }
 }

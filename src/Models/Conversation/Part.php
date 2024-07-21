@@ -26,15 +26,6 @@ class Part extends BaseModel
     {
         $this->author = new PartAuthor($data->author);
 
-        $this->setData($data);
-    }
-
-    /**
-     * @return int
-     */
-    public function getId(): int
-    {
-        return $this->id;
-
+        parent::__construct($data);
     }
 }

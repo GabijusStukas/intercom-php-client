@@ -4,7 +4,6 @@ namespace Intercom\Resources;
 
 use Intercom\Exceptions\IntercomApiException;
 use Intercom\Models\Conversation\Conversation;
-use stdClass;
 
 class Conversations extends BaseResource
 {
@@ -27,7 +26,7 @@ class Conversations extends BaseResource
      * @param int $id
      * @return string
      */
-    public function conversationPath(int $id): string
+    private function conversationPath(int $id): string
     {
         return 'conversations/' . $id;
     }
