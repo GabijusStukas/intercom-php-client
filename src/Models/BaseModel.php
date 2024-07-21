@@ -30,6 +30,11 @@ abstract class BaseModel
         }
     }
 
+    /**
+     * @param int|null $timestamp
+     *
+     * @return Carbon|null
+     */
     protected function setTimestamp(?int $timestamp): ?Carbon
     {
         return $timestamp ? Carbon::parse($timestamp) : null;
